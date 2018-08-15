@@ -10,7 +10,7 @@ class Bitcambio
   protected $urlBase = "https://bitcambio_api.blinktrade.com/api/v1";
   protected $urlBaseTrade = "https://bitcambio_api.blinktrade.com/tapi/v1";
 
-  public function __construct()
+  public function __construct ()
   {
     $arguments = func_get_args();
     $this->apiKey = $arguments[0];
@@ -19,7 +19,7 @@ class Bitcambio
   }
 
   // API Documentation: https://blinktrade.com/docs/?javascript#ticker
-  public function ticker($currency = 'BTC')
+  public function ticker ($currency = 'BTC')
   {    
     $apiURL = "/BRL/ticker?crypto_currency={$currency}";
 
@@ -27,7 +27,7 @@ class Bitcambio
   }
  
   // API Documentation: https://blinktrade.com/docs/?javascript#orderbook
-  public function orderbook($currency = 'BTC')
+  public function orderbook ($currency = 'BTC')
   {
     $apiURL = "/BRL/orderbook?crypto_currency={$currency}";
 
@@ -35,7 +35,7 @@ class Bitcambio
   }
 
   // API Documentation: https://blinktrade.com/docs/?javascript#trades
-  public function trades($since = "", $limit = "100")
+  public function trades ($since = "", $limit = "100")
   {
     $apiURL = "/BRL/trades?since={$since}&limit={$limit}";
 
@@ -43,7 +43,7 @@ class Bitcambio
   }
 
   // API Documentation: https://blinktrade.com/docs/?javascript#balance
-  public function balance()
+  public function balance ()
   {
     $apiURL = "/message";
     $apiKeyRequired = true;
@@ -66,7 +66,7 @@ class Bitcambio
       return $hmac;
   }
 
-  private function initCurl($url = '', $apiKeyRequired = false, $fields = [], $message = "")
+  private function initCurl ($url = '', $apiKeyRequired = false, $fields = [], $message = "")
   {
     $curl = curl_init();
     
@@ -88,9 +88,9 @@ class Bitcambio
       $fields["BalanceReqID"] = (int) $nonce;
 
       // Set header
-      array_unshift($header, "APIKey {$this->apiKey}");
-      array_unshift($header, "Nonce {$nonce}");
-      array_unshift($header, "Signature {$this->hmac($nonce, $this->apiSecret)}");  
+      array_unshift($header, "Signature: {$this->hmac($nonce, $this->apiSecret)}");  
+      array_unshift($header, "Nonce: {$nonce}");
+      array_unshift($header, "APIKey: {$this->apiKey}");
       $this->urlBase = $this->urlBaseTrade;
     }
     
@@ -116,7 +116,7 @@ class Bitcambio
     
     curl_close($curl);
     
-    //var_dump($fields, $this->urlBase.$url, $method, $response);
+    var_dump($header, $fields, $this->urlBase.$url, $method, $response);
     
     return $err
       ? "cURL Error #: {$err}"
