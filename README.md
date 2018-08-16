@@ -31,6 +31,7 @@ $exchange = new Bitcambio($apiKey, $apiPassword, $apiSecret);
 ## Exemplos dos Métodos Públicos (Não há necessidade de usar as chaves de API)
 
 ### Buscar Ticker
+
 [Veja o exemplo completo](https://github.com/MiguelMedeiros/bitcambio-api-php/blob/master/examples/ticker.php)
 
 ```php
@@ -39,6 +40,7 @@ var_dump($ticker);
 ```
 
 ### Buscar Livro de Ordens
+
 [Veja o exemplo completo](https://github.com/MiguelMedeiros/bitcambio-api-php/blob/master/examples/orderbook.php)
 
 ```php
@@ -49,6 +51,7 @@ var_dump($orderbook);
 ## Exemplos dos Métodos Privados (Há necessidade de usar as chaves de API)
 
 ### Buscar Balanço da Conta
+
 [Veja o exemplo completo](https://github.com/MiguelMedeiros/bitcambio-api-php/blob/master/examples/balance.php)
 
 ```php
@@ -57,6 +60,7 @@ var_dump($balance);
 ```
 
 ### Buscar Minhas Ordens
+
 [Veja o exemplo completo](https://github.com/MiguelMedeiros/bitcambio-api-php/blob/master/examples/my-orders.php)
 
 ```php
@@ -65,9 +69,10 @@ var_dump($myOrders);
 ```
 
 ### Criar Ordens
-[Veja o exemplo completo](https://github.com/MiguelMedeiros/bitcambio-api-php/blob/master/examples/create-order.php)
 
 #### MARKET - compra ou venda
+
+[Veja o exemplo completo](https://github.com/MiguelMedeiros/bitcambio-api-php/blob/master/examples/create-order.php)
 
 ```php
 // Exemplo de ordem (compra ou venda): MARKET
@@ -81,6 +86,8 @@ var_dump($order);
 
 #### LIMIT - compra ou venda
 
+[Veja o exemplo completo](https://github.com/MiguelMedeiros/bitcambio-api-php/blob/master/examples/create-order.php)
+
 ```php
 // Exemplo de ordem (compra ou venda): LIMIT
 $unitPrice = 30000; // Cotação em reais de venda ou compra
@@ -93,6 +100,8 @@ var_dump($order);
 ```
 
 #### STOP - compra ou venda
+
+[Veja o exemplo completo](https://github.com/MiguelMedeiros/bitcambio-api-php/blob/master/examples/create-order.php)
 
 ```php
 // Exemplo de ordem (compra ou venda): STOP
@@ -108,6 +117,8 @@ var_dump($order);
 
 #### LIMIT STOP - compra ou venda
 
+[Veja o exemplo completo](https://github.com/MiguelMedeiros/bitcambio-api-php/blob/master/examples/create-order.php)
+
 ```php
 // Exemplo de ordem (compra ou venda): STOP LIMIT
 // Essa ordem vai funcionar como uma LIMIT order
@@ -122,6 +133,7 @@ var_dump($order);
 ```
 
 ### Cancelar Ordem
+
 [Veja o exemplo completo](https://github.com/MiguelMedeiros/bitcambio-api-php/blob/master/examples/cancel-order.php)
 
 ```php
