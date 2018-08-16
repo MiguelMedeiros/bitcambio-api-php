@@ -31,8 +31,7 @@ $exchange = new Bitcambio($apiKey, $apiPassword, $apiSecret);
 ## Exemplos dos Métodos Públicos (Não há necessidade de usar as chaves de API)
 
 ### Buscar Ticker
-
-[Exemplo Completo](https://github.com/MiguelMedeiros/bitcambio-api-php/blob/master/examples/ticker.php)
+[Veja o exemplo completo](https://github.com/MiguelMedeiros/bitcambio-api-php/blob/master/examples/ticker.php)
 
 ```php
 $ticker = $exchange->ticker();
@@ -40,8 +39,7 @@ var_dump($ticker);
 ```
 
 ### Buscar Livro de Ordens
-
-[Exemplo Completo](https://github.com/MiguelMedeiros/bitcambio-api-php/blob/master/examples/orderbook.php)
+[Veja o exemplo completo](https://github.com/MiguelMedeiros/bitcambio-api-php/blob/master/examples/orderbook.php)
 
 ```php
 $orderbook = $exchange->orderbook();
@@ -51,8 +49,7 @@ var_dump($orderbook);
 ## Exemplos dos Métodos Privados (Há necessidade de usar as chaves de API)
 
 ### Buscar Balanço da Conta
-
-[Exemplo Completo](https://github.com/MiguelMedeiros/bitcambio-api-php/blob/master/examples/balance.php)
+[Veja o exemplo completo](https://github.com/MiguelMedeiros/bitcambio-api-php/blob/master/examples/balance.php)
 
 ```php
 $balance = $exchange->balance();
@@ -60,8 +57,7 @@ var_dump($balance);
 ```
 
 ### Buscar Minhas Ordens
-
-[Exemplo Completo](https://github.com/MiguelMedeiros/bitcambio-api-php/blob/master/examples/my-orders.php)
+[Veja o exemplo completo](https://github.com/MiguelMedeiros/bitcambio-api-php/blob/master/examples/my-orders.php)
 
 ```php
 $myOrders = $exchange->myOrders();
@@ -69,8 +65,7 @@ var_dump($myOrders);
 ```
 
 ### Criar Ordens
-
-[Exemplo Completo](https://github.com/MiguelMedeiros/bitcambio-api-php/blob/master/examples/create-order.php)
+[Veja o exemplo completo](https://github.com/MiguelMedeiros/bitcambio-api-php/blob/master/examples/create-order.php)
 
 #### MARKET - compra ou venda
 
@@ -127,8 +122,7 @@ var_dump($order);
 ```
 
 ### Cancelar Ordem
-
-[Exemplo Completo](https://github.com/MiguelMedeiros/bitcambio-api-php/blob/master/examples/cancel-order.php)
+[Veja o exemplo completo](https://github.com/MiguelMedeiros/bitcambio-api-php/blob/master/examples/cancel-order.php)
 
 ```php
 $orderID = "1073880844"; // ID é o campo ClOrdID
