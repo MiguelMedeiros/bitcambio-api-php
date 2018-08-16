@@ -32,12 +32,16 @@ $exchange = new Bitcambio($apiKey, $apiPassword, $apiSecret);
 
 ### Buscar Ticker
 
+[Exemplo Completo](https://github.com/MiguelMedeiros/bitcambio-api-php/blob/master/examples/ticker.php)
+
 ```php
 $ticker = $exchange->ticker();
 var_dump($ticker);
 ```
 
 ### Buscar Livro de Ordens
+
+[Exemplo Completo](https://github.com/MiguelMedeiros/bitcambio-api-php/blob/master/examples/orderbook.php)
 
 ```php
 $orderbook = $exchange->orderbook();
@@ -48,6 +52,8 @@ var_dump($orderbook);
 
 ### Buscar Balanço da Conta
 
+[Exemplo Completo](https://github.com/MiguelMedeiros/bitcambio-api-php/blob/master/examples/balance.php)
+
 ```php
 $balance = $exchange->balance();
 var_dump($balance);
@@ -55,12 +61,16 @@ var_dump($balance);
 
 ### Buscar Minhas Ordens
 
+[Exemplo Completo](https://github.com/MiguelMedeiros/bitcambio-api-php/blob/master/examples/my-orders.php)
+
 ```php
 $myOrders = $exchange->myOrders();
 var_dump($myOrders);
 ```
 
-### Create Order
+### Criar Ordens
+
+[Exemplo Completo](https://github.com/MiguelMedeiros/bitcambio-api-php/blob/master/examples/create-order.php)
 
 #### MARKET - compra ou venda
 
@@ -117,6 +127,8 @@ var_dump($order);
 ```
 
 ### Cancelar Ordem
+
+[Exemplo Completo](https://github.com/MiguelMedeiros/bitcambio-api-php/blob/master/examples/cancel-order.php)
 
 ```php
 $orderID = "1073880844"; // ID é o campo ClOrdID
